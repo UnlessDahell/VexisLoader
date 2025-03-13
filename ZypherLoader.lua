@@ -1,4 +1,15 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+if not game:IsLoaded() then
+   game.Loaded:Wait() 
+end
+
+local success, Rayfield = pcall(function()
+   return loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+end)
+
+if not success then
+   warn("Failed to load Rayfield UI. Please check the URL or try again later.")
+   return
+end
 
 local Window = Rayfield:CreateWindow({
    Name = "Zypher Script Loader (.gg/PNuYYAtd)",
@@ -18,7 +29,7 @@ local Window = Rayfield:CreateWindow({
 
    Discord = {
       Enabled = false, 
-      Invite = "PNuYYAtd", -- Fixed invalid invite link format
+      Invite = "PNuYYAtd", 
       RememberJoins = true 
    },
 
@@ -46,8 +57,8 @@ local Button = MainTab:CreateButton({
 
 Rayfield:Notify({
    Title = "Zypher Notifying",
-   Content = "Please don't forget to join our community server!\n(https://discord.gg/PNuYYAtd)",
-   Duration = 6.5,
+   Content = "Please don't forget to join our community server!\n(https://discord.gg/PNuYYAtd)", 
+   Duration = 15,
    Image = 4483362458,
 })
 
@@ -57,5 +68,15 @@ local Button2 = MainTab:CreateButton({
    Name = "Discord Link Click to Get Here!",
    Callback = function()
       setclipboard("https://discord.gg/PNuYYAtd")
+   end,
+})
+
+local Section = DestroyTab:CreateSection("Destroy This Loader")
+Section:Set("THIS LOADER WILL GONE IF YOU CLICK BELOW BUTTON!")
+
+local Button = DestroyTab:CreateButton({
+   Name = "Destroy Loader",
+   Callback = function()
+   Rayfield:Destroy()
    end,
 })
