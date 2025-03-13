@@ -71,9 +71,8 @@ local Button2 = MainTab:CreateButton({
    end,
 })
 
-local Tab = DestroyWindow:CreateTab("Destroy This Loader Ui", 4483362458)
+local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 4483362458)
 local Section = DestroyTab:CreateSection("Destroy This Loader")
-Section:Set("THIS LOADER WILL GONE IF YOU CLICK BELOW BUTTON!")
 
 local Button = DestroyTab:CreateButton({
    Name = "Destroy Loader",
