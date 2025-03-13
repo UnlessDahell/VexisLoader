@@ -46,7 +46,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 -- Main Tab
-local MainTab = Window:CreateTab("Zypher Loader", 4483362458)
+local MainTab = Window:CreateTab("Zypher Loader", 96498583756446)
 local MainSection = MainTab:CreateSection("Main Loader")
 
 local Button = MainTab:CreateButton({
@@ -60,7 +60,7 @@ Rayfield:Notify({
    Title = "Zypher Notifying",
    Content = "Please don't forget to join our community server!\n(https://discord.gg/PNuYYAtd)", 
    Duration = 15,
-   Image = 4483362458,
+   Image = 130686715880419,
 })
 
 local CommunitySection = MainTab:CreateSection("Our Discord Community Server")
@@ -72,7 +72,7 @@ local Button2 = MainTab:CreateButton({
    end,
 })
 
-local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 4483362458)
+local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 85694405677478)
 local DestroySection = DestroyTab:CreateSection("Destroy This Loader")
 
 local Button = DestroyTab:CreateButton({
