@@ -45,8 +45,9 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+-- Main Tab
 local MainTab = Window:CreateTab("Zypher Loader", 4483362458)
-local Section = MainTab:CreateSection("Main Loader")
+local MainSection = MainTab:CreateSection("Main Loader")
 
 local Button = MainTab:CreateButton({
    Name = "Fearise Hub : Blue lock Rivals :",
@@ -62,7 +63,7 @@ Rayfield:Notify({
    Image = 4483362458,
 })
 
-local Section2 = MainTab:CreateSection("Our Discord Community Server")
+local CommunitySection = MainTab:CreateSection("Our Discord Community Server")
 
 local Button2 = MainTab:CreateButton({
    Name = "Discord Link Click to Get Here!",
@@ -72,11 +73,11 @@ local Button2 = MainTab:CreateButton({
 })
 
 local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 4483362458)
-local Section = DestroyTab:CreateSection("Destroy This Loader")
+local DestroySection = DestroyTab:CreateSection("Destroy This Loader")
 
 local Button = DestroyTab:CreateButton({
    Name = "Destroy Loader",
    Callback = function()
-   Rayfield:Destroy()
+      Rayfield:Destroy()
    end,
 })
