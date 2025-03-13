@@ -13,7 +13,7 @@ end
 
 local Window = Rayfield:CreateWindow({
    Name = "Zypher Script Loader (.gg/PNuYYAtd)",
-   Icon = 119123057452233, 
+   Icon = 82284779245358, 
    LoadingTitle = "Wait until GUI setup",
    LoadingSubtitle = "by Sir.Zypher and Skider",
    Theme = "Serenity",
@@ -45,7 +45,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("Zypher Loader", 130913487618471)
+local MainTab = Window:CreateTab("Zypher Loader", 132272873219669)
 local MainSection = MainTab:CreateSection("Main Loader")
 
 local Button = MainTab:CreateButton({
@@ -71,8 +71,8 @@ local Button2 = MainTab:CreateButton({
    end,
 })
 
-local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 78408295020642)
-local DestroySection = DestroyTab:CreateSection("Destroy This Loader")
+local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 130985545137273)
+local DestrotroyTab:CreateSection("Destroy This Loader")
 
 local Button = DestroyTab:CreateButton({
    Name = "Destroy Loader",
