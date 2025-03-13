@@ -1,18 +1,18 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Rayfield Example Window",
+   Name = "Zypher Script Loader",
    Icon = 87717028958575, 
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by Sirius",
-   Theme = "Default",
+   LoadingTitle = "Wait untill GUI set up",
+   LoadingSubtitle = "by Sir.Zypher and Skider",
+   Theme = "Serenity",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = 
    ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, 
-      FileName = "Big Hub"
+      Enabled = false,
+      FolderName = false, 
+      FileName = "Zypher"
    },
 
    Discord = {
@@ -23,13 +23,18 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = false, 
    KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", 
-      FileName = "Key", 
+      Title = "Zypher Hub",
+      Subtitle = "Loader have No key!",
+      Note = "Join discord for news!!", 
+      FileName = "ZTeam", 
       SaveKey = true, 
       GrabKeyFromSite = false, 
-      Key = {"Hello"} 
+      Key = {"ZTeam"} 
    }
 })
+
+local MainTab = Window:CreateTab("Zypher Loader", 4483362458)
+local Section = MainTab:CreateSection("Main Loader")
+
+
 
