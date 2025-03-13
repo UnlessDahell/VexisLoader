@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Zypher Script Loader",
+   Name = "Zypher Script Loader (.gg/PNuYYAtd)",
    Icon = 8771702895, 
    LoadingTitle = "Wait until GUI setup",
    LoadingSubtitle = "by Sir.Zypher and Skider",
@@ -42,4 +42,12 @@ local Button = MainTab:CreateButton({
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_Hub_Bluelock_newloader.lua",true))()
    end,
+})
+
+Rayfield:Notify({
+   Title = "Zypher Notifying",
+   Content = "Please don't forget to join our community server!
+      (https://discord.gg/PNuYYAtd)",
+   Duration = 6.5,
+   Image = 4483362458,
 })
