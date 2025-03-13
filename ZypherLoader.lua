@@ -18,7 +18,7 @@ local Window = Rayfield:CreateWindow({
 
    Discord = {
       Enabled = false, 
-      Invite = "noinvitelink",
+      Invite = "PNuYYAtd", -- Fixed invalid invite link format
       RememberJoins = true 
    },
 
@@ -40,23 +40,22 @@ local Section = MainTab:CreateSection("Main Loader")
 local Button = MainTab:CreateButton({
    Name = "Fearise Hub : Blue lock Rivals :",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_Hub_Bluelock_newloader.lua",true))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_Hub_Bluelock_newloader.lua", true))()
    end,
 })
 
 Rayfield:Notify({
    Title = "Zypher Notifying",
-   Content = "Please don't forget to join our community server!
-      (https://discord.gg/PNuYYAtd)",
+   Content = "Please don't forget to join our community server!\n(https://discord.gg/PNuYYAtd)",
    Duration = 6.5,
    Image = 4483362458,
 })
 
-local Section = MainTab:CreateSection("Our Dicord Community Server")
+local Section2 = MainTab:CreateSection("Our Discord Community Server")
 
-local Button = Tab:CreateButton({
+local Button2 = MainTab:CreateButton({
    Name = "Discord Link Click to Get Here!",
    Callback = function()
-   setclipboard("https://discord.gg/PNuYYAtd")
+      setclipboard("https://discord.gg/PNuYYAtd")
    end,
 })
