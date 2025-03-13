@@ -51,3 +51,12 @@ Rayfield:Notify({
    Duration = 6.5,
    Image = 4483362458,
 })
+
+local Section = MainTab:CreateSection("Our Dicord Community Server")
+
+local Button = Tab:CreateButton({
+   Name = "Discord Link Click to Get Here!",
+   Callback = function()
+   setclipboard("https://discord.gg/PNuYYAtd")
+   end,
+})
