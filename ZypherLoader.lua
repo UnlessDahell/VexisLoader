@@ -36,3 +36,10 @@ local Window = Rayfield:CreateWindow({
 
 local MainTab = Window:CreateTab("Zypher Loader", 4483362458)
 local Section = MainTab:CreateSection("Main Loader")
+
+local Button = MainTab:CreateButton({
+   Name = "Fearise Hub : Blue lock Rivals :",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_Hub_Bluelock_newloader.lua",true))()
+   end,
+})
