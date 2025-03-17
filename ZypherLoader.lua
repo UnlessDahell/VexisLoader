@@ -12,7 +12,7 @@ if not success then
 end
 
 local Window = Rayfield:CreateWindow({
-   Name = "Zypher Script Loader (.gg/PNuYYAtd)",
+   Name = "Zypher Script Loader (.gg/wDj3ve2K)",
    Icon = 82284779245358, 
    LoadingTitle = "Wait until GUI setup",
    LoadingSubtitle = "by Sir.Zypher and Skider",
@@ -57,8 +57,8 @@ local Button = MainTab:CreateButton({
 
 Rayfield:Notify({
    Title = "Zypher Notifying",
-   Content = "Please don't forget to join our community server!\n(https://discord.gg/PNuYYAtd)", 
-   Duration = 15,
+   Content = "Please don't forget to join our community server!\n(https://discord.gg/wDj3ve2K)", 
+   Duration = 25,
    Image = 4483362458,
 })
 
