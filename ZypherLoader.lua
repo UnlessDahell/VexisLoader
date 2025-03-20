@@ -23,7 +23,7 @@ local Window = Rayfield:CreateWindow({
 
    ConfigurationSaving = {
       Enabled = false,
-      FolderName = nil, 
+      FolderName = true, 
       FileName = "Zypher"
    },
 
@@ -36,8 +36,8 @@ local Window = Rayfield:CreateWindow({
    KeySystem = true, 
    KeySettings = {
       Title = "Zypher Hub Key system",
-      Subtitle = "Zypher Hub Need More Member!",
-      Note = "Join Our Discord for News And Key!!(.gg/wDj3ve2K)", 
+      Subtitle = "Zypher Hub Need More Member! (.gg/wDj3ve2K)",
+      Note = "Join Our Discord for News And Key!!.gg/wDj3ve2K", 
       FileName = "ZTeam", 
       SaveKey = true, 
       GrabKeyFromSite = false, 
