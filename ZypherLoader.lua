@@ -41,7 +41,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "ZTeam", 
       SaveKey = true, 
       GrabKeyFromSite = false, 
-      Key = {"ZTeam"} 
+      Key = {"Zypher-227-945"} 
    }
 })
 
