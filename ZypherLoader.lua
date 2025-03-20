@@ -1,5 +1,5 @@
 if not game:IsLoaded() then
-   game.Loaded:Wait() 
+   game.Loaded:Wait()
 end
 
 local success, Rayfield = pcall(function()
@@ -23,7 +23,7 @@ local Window = Rayfield:CreateWindow({
 
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = true, 
+      FolderName = "Zypher",  
       FileName = "Zypher"
    },
 
@@ -39,44 +39,14 @@ local Window = Rayfield:CreateWindow({
       Subtitle = "Zypher Hub Need More Member! (.gg/wDj3ve2K)",
       Note = "Join Our Discord for News And Key!! .gg/wDj3ve2K", 
       FileName = "ZTeam", 
-      SaveKey = true, 
+      SaveKey = true,  -- This should allow saving the key
       GrabKeyFromSite = false, 
       Key = {"Zypher-227-945"} 
    }
 })
 
-local MainTab = Window:CreateTab("Zypher Loader", 132272873219669)
-local MainSection = MainTab:CreateSection("Main Loader")
-
-local Button = MainTab:CreateButton({
-   Name = "Fearise Hub : Blue lock Rivals :",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_Hub_Bluelock_newloader.lua", true))()
-   end,
-})
-
-Rayfield:Notify({
-   Title = "Zypher Notifying",
-   Content = "Please don't forget to join our community server!\n(https://discord.gg/wDj3ve2K)", 
-   Duration = 25,
-   Image = 4483362458,
-})
-
-local CommunitySection = MainTab:CreateSection("Our Discord Community Server")
-
-local Button2 = MainTab:CreateButton({
-   Name = "Discord Link Click to Get Here!",
-   Callback = function()
-      setclipboard("https://discord.gg/PNuYYAtd")
-   end,
-})
-
-local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 130985545137273)
-local DestroySection = DestroyTab:CreateSection("Destroy This Loader")
-
-local Button = DestroyTab:CreateButton({
-   Name = "Destroy Loader",
-   Callback = function()
-      Rayfield:Destroy()
-   end,
-})
+Rayfield.KeySystem.OnKeyAccepted = function(enteredKey)
+   if Window.ConfigurationSaving.Enabled and Window.KeySettings.SaveKey then
+      Rayfield:SaveConfiguration()
+   end
+end
