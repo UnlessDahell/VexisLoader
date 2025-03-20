@@ -29,15 +29,15 @@ local Window = Rayfield:CreateWindow({
 
    Discord = {
       Enabled = false, 
-      Invite = "PNuYYAtd", 
+      Invite = ".gg/wDj3ve2K", 
       RememberJoins = true 
    },
 
    KeySystem = false, 
    KeySettings = {
-      Title = "Zypher Hub",
-      Subtitle = "Loader has no key!",
-      Note = "Join Discord for news!!", 
+      Title = "Zypher Hub Key system",
+      Subtitle = "Zypher Hub Need More Member!",
+      Note = "Join Our Discord for News And Key!! (https://discord.gg/wDj3ve2K)", 
       FileName = "ZTeam", 
       SaveKey = true, 
       GrabKeyFromSite = false, 
