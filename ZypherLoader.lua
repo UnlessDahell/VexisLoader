@@ -12,7 +12,7 @@ return
 end
 
 local Window = Rayfield:CreateWindow({
-Name = "Zypher Script Loader (.gg/wDj3ve2K)",
+Name = "Zypher Script Loader (.gg/p5ynKu5f)",
 Icon = 82284779245358,
 LoadingTitle = "Wait until GUI setup",
 LoadingSubtitle = "by Sir.Zypher and Skider",
@@ -29,15 +29,15 @@ FileName = "Zypher"
 
 Discord = {
 Enabled = false,
-Invite = ".gg/wDj3ve2K",
+Invite = ".gg/p5ynKu5f",
 RememberJoins = true
 },
 
 KeySystem = true,
 KeySettings = {
 Title = "Zypher Hub Key system (HOTFIX)",
-Subtitle = "Zypher Hub Need More Member! (.gg/wDj3ve2K)",
-Note = "Join Our Discord for News And Key!! .gg/wDj3ve2K",
+Subtitle = "Zypher Hub Need More Member! (.gg/p5ynKu5f)",
+Note = "Join Our Discord for News And Key!! .gg/p5ynKu5f",
 FileName = "ZTeam",
 SaveKey = true,
 GrabKeyFromSite = false,
@@ -57,7 +57,7 @@ end,
 
 Rayfield:Notify({
 Title = "Zypher Notifying",
-Content = "Please don't forget to join our community server!\n(https://discord.gg/wDj3ve2K)",
+Content = "Please don't forget to join our community server!! (https://discord.gg/p5ynKu5f)",
 Duration = 25,
 Image = 4483362458,
 })
@@ -67,7 +67,7 @@ local CommunitySection = MainTab:CreateSection("Our Discord Community Server")
 local Button2 = MainTab:CreateButton({
 Name = "Discord Link Click to Get Here!",
 Callback = function()
-setclipboard("https://discord.gg/PNuYYAtd")
+setclipboard("https://discord.gg/p5ynKu5f")
 end,
 })
 
