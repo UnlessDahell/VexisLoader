@@ -33,7 +33,7 @@ local Window = Rayfield:CreateWindow({
       RememberJoins = true 
    },
 
-   KeySystem = false, 
+   KeySystem = true, 
    KeySettings = {
       Title = "Zypher Hub Key system",
       Subtitle = "Zypher Hub Need More Member!",
