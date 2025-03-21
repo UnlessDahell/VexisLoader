@@ -35,8 +35,8 @@ RememberJoins = true
 
 KeySystem = true,
 KeySettings = {
-Title = "Zypher Hub Key system (HOTFIX)",
-Subtitle = "Zypher Hub Need More Member! (.gg/p5ynKu5f)",
+Title = "Zypher Hub Key system (HOTFIX-1.5)",
+Subtitle = "Zypher Hub Need Member! (.gg/p5ynKu5f)",
 Note = "Join Our Discord for News And Key!! .gg/p5ynKu5f",
 FileName = "ZTeam",
 SaveKey = true,
