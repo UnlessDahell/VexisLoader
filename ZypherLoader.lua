@@ -14,7 +14,7 @@ end
 local Window = Rayfield:CreateWindow({
 Name = "Zypher Script Loader (.gg/p5ynKu5f)",
 Icon = 82284779245358,
-LoadingTitle = "Wait until GUI setup",
+LoadingTitle = "Wait until UI load up",
 LoadingSubtitle = "by Sir.Zypher and Skider",
 Theme = "Serenity",
 
@@ -41,7 +41,7 @@ Note = "Join Our Discord for News And Key!! .gg/p5ynKu5f",
 FileName = "ZTeam",
 SaveKey = true,
 GrabKeyFromSite = false,
-Key = {"Zypher-227-945"}
+Key = {"Zypher-230-member"}
 }
 })
 
