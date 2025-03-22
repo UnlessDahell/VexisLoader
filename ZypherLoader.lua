@@ -35,7 +35,7 @@ RememberJoins = true
 
 KeySystem = true,
 KeySettings = {
-Title = "Zypher Hub Key system (HOTFIX-1.5)",
+Title = "Zypher Hub Key system (Preview)",
 Subtitle = "Zypher Hub Need Member! (.gg/p5ynKu5f)",
 Note = "Join Our Discord for News And Key!! .gg/p5ynKu5f",
 FileName = "ZTeam",
@@ -52,6 +52,13 @@ local Button = MainTab:CreateButton({
 Name = "Fearise Hub : Blue lock Rivals :",
 Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_Hub_Bluelock_newloader.lua", true))()
+end,
+})
+
+local Button2 = MainTab:CreateButton({
+Name = "Zypher Hub : Forsaken (Preview) :",
+Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/Zyphersaken/refs/heads/main/ZyphersakenMINUS.lua", true))()
 end,
 })
 
