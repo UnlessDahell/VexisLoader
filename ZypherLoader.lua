@@ -56,9 +56,9 @@ end,
 })
 
 local Button2 = MainTab:CreateButton({
-Name = "Zypher Hub : Forsaken (Preview) :",
+Name = "Zypher Hub : Forsaken (Preview Ended) :",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/Zyphersaken/refs/heads/main/ZyphersakenMINUS.lua", true))()
+print("Preview ended now it's time to continue full version of Zypher Forsaken")
 end,
 })
 
