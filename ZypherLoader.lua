@@ -15,7 +15,7 @@ local Window = Rayfield:CreateWindow({
 Name = "Zypher Script Loader (.gg/p5ynKu5f)",
 Icon = 82284779245358,
 LoadingTitle = "Wait until UI load up",
-LoadingSubtitle = "by Sir.Zypher and Skider",
+LoadingSubtitle = "by Sir.Zypher and Eyes Sight",
 Theme = "Serenity",
 
 DisableRayfieldPrompts = false,
@@ -59,6 +59,15 @@ local Button2 = MainTab:CreateButton({
 Name = "Zypher Hub : Forsaken (Preview Ended) :",
 Callback = function()
 print("Preview ended now it's time to continue full version of Zypher Forsaken")
+end,
+})
+
+local FearisePreUPDSection = MainTab:CreateSection("This is PreUPDATE version before Update main one (Test Version)")
+
+local Button3 = MainTab:CreateButton({
+Name = "Fearise Hub PreUPD v3.2 (Test Version) :",
+Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/PreUPD-FeariseHubV3.2.lua",true))()
 end,
 })
 
