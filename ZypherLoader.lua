@@ -22,7 +22,7 @@ DisableRayfieldPrompts = false,
 DisableBuildWarnings = false,
 
 ConfigurationSaving = {
-Enabled = true,
+Enabled = false,
 FolderName = Zypher,
 FileName = "Zypher"
 },
