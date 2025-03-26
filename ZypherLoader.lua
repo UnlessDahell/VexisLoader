@@ -12,7 +12,7 @@ return
 end
 
 local Window = Rayfield:CreateWindow({
-Name = "Zypher Script Loader (.gg/p5ynKu5f)",
+Name = "Zypher Script Loader (.gg/aTNg2Dcw)",
 Icon = 82284779245358,
 LoadingTitle = "Wait until UI load up",
 LoadingSubtitle = "by Sir.Zypher and Eyes Sight",
@@ -23,21 +23,21 @@ DisableBuildWarnings = false,
 
 ConfigurationSaving = {
 Enabled = true,
-FolderName = true,
+FolderName = Zypher,
 FileName = "Zypher"
 },
 
 Discord = {
 Enabled = false,
-Invite = ".gg/p5ynKu5f",
+Invite = "https://discord.gg/aTNg2Dcw",
 RememberJoins = true
 },
 
 KeySystem = true,
 KeySettings = {
 Title = "Zypher Hub Key system (Preview)",
-Subtitle = "Zypher Hub Need Member! (.gg/p5ynKu5f)",
-Note = "Join Our Discord for News And Key!! .gg/p5ynKu5f",
+Subtitle = "Zypher Hub Need Member! (.gg/aTNg2Dcw)",
+Note = "Join Our Discord for News And Key!! .gg/aTNg2Dcw",
 FileName = "ZTeam",
 SaveKey = true,
 GrabKeyFromSite = false,
@@ -83,7 +83,7 @@ local CommunitySection = MainTab:CreateSection("Our Discord Community Server")
 local Button2 = MainTab:CreateButton({
 Name = "Discord Link Click to Get Here!",
 Callback = function()
-setclipboard("https://discord.gg/p5ynKu5f")
+setclipboard("https://discord.gg/aTNg2Dcw")
 end,
 })
 
