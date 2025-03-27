@@ -1,49 +1,75 @@
+
 if not game:IsLoaded() then
-game.Loaded:Wait()
+    game.Loaded:Wait()
 end
 
 local success, Rayfield = pcall(function()
-return loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+    return loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 end)
 
 if not success then
-warn("Failed to load Rayfield UI. Please check the URL or try again later.")
-return
+    warn("Failed to load Rayfield UI. Please check the URL or Try again later.")
+    return
+end
+
+local function loadSavedKey()
+    if isfile("Zypher/Key.txt") then
+        return readfile("Zypher/Key.txt")
+    else
+        return nil
+    end
+end
+
+local function saveKey(key)
+    if not isfolder("Zypher") then
+        makefolder("Zypher")
+    end
+    writefile("Zypher/Key.txt", key)
 end
 
 local Window = Rayfield:CreateWindow({
-Name = "Zypher Script Loader (.gg/aTNg2Dcw)",
-Icon = 82284779245358,
-LoadingTitle = "Wait until UI load up",
-LoadingSubtitle = "by Sir.Zypher and Eyes Sight",
-Theme = "Serenity",
+    Name = "Zypher Script Loader (.gg/aTNg2Dcw)",
+    Icon = 82284779245358,
+    LoadingTitle = "Wait until UI load up",
+    LoadingSubtitle = "by Sir.Zypher and Eyes Sight",
+    Theme = "Serenity",
 
-DisableRayfieldPrompts = false,
-DisableBuildWarnings = false,
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false,
 
-ConfigurationSaving = {
-Enabled = false,
-FolderName = Zypher,
-FileName = "Zypher"
-},
+    ConfigurationSaving = {
+        Enabled = false,
+        FolderName = "Zypher",
+        FileName = "Zypher"
+    },
 
-Discord = {
-Enabled = false,
-Invite = "https://discord.gg/aTNg2Dcw",
-RememberJoins = true
-},
+    Discord = {
+        Enabled = false,
+        Invite = "https://discord.gg/aTNg2Dcw",
+        RememberJoins = true
+    },
 
-KeySystem = true,
-KeySettings = {
-Title = "Zypher Hub Key system (Preview)",
-Subtitle = "Zypher Hub Need Member! (.gg/aTNg2Dcw)",
-Note = "Join Our Discord for News And Key!! .gg/aTNg2Dcw",
-FileName = "ZTeam",
-SaveKey = true,
-GrabKeyFromSite = false,
-Key = {"Zypher-230-member"}
-}
+    KeySystem = true,
+    KeySettings = {
+        Title = "Zypher Hub Key system (Preview)",
+        Subtitle = "Zypher Hub Need Member! (.gg/aTNg2Dcw)",
+        Note = "Join Our Discord for News And Key!! .gg/aTNg2Dcw",
+        FileName = "ZTeam",
+        SaveKey = true,
+        GrabKeyFromSite = false,
+        Key = {"Zypher-230-member"},
+
+        DefaultKey = loadSavedKey(),
+        
+        KeySaved = function(key)
+            saveKey(key)
+        end
+    }
 })
+
+if Window.KeySettings.DefaultKey then
+    Window.KeySettings.Key = {Window.KeySettings.DefaultKey}
+end
 
 local MainTab = Window:CreateTab("Zypher Loader", 132272873219669)
 local MainSection = MainTab:CreateSection("Main Loader")
