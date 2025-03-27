@@ -1,29 +1,4 @@
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-end
-
-local success, Rayfield = pcall(function()
-    return loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-end)
-
-if not success then
-    return
-end
-
-local function loadSavedKey()
-    if isfile("Zypher/Key.txt") then
-        return readfile("Zypher/Key.txt")
-    else
-        return nil
-    end
-end
-
-local function saveKey(key)
-    if not isfolder("Zypher") then
-        makefolder("Zypher")
-    end
-    writefile("Zypher/Key.txt", key)
-end
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
     Name = "Zypher Script Loader (.gg/aTNg2Dcw)",
@@ -56,18 +31,8 @@ local Window = Rayfield:CreateWindow({
         SaveKey = true,
         GrabKeyFromSite = false,
         Key = {"Zypher-230-member"},
-
-        DefaultKey = loadSavedKey(),
-        
-        KeySaved = function(key)
-            saveKey(key)
-        end
     }
 })
-
-if Window.KeySettings.DefaultKey then
-    Window.KeySettings.Key = {Window.KeySettings.DefaultKey}
-end
 
 local MainTab = Window:CreateTab("Zypher Loader", 132272873219669)
 local MainSection = MainTab:CreateSection("Main Loader")
