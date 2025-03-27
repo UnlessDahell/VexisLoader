@@ -7,7 +7,6 @@ local success, Rayfield = pcall(function()
 end)
 
 if not success then
-    warn("Failed to load Rayfield UI. Please check the URL or Try again later.")
     return
 end
 
