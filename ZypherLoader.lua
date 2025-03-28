@@ -60,6 +60,15 @@ local Button3 = MainTab:CreateButton({
     end,
 })
 
+local MainSection2 = Tab:CreateSection("Dead Rails (Alpha)")
+
+local Button4 = MainTab:CreateButton({
+    Name = "Zypher Hub : Dead Rails : (Alpha) :",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/ZypherRails/refs/heads/main/ZypherDeadRails.lua",true))()
+    end,
+})
+
 Rayfield:Notify({
     Title = "Zypher Notifying",
     Content = "Please don't forget to join our community server!! (https://discord.gg/p5ynKu5f)",
@@ -69,7 +78,7 @@ Rayfield:Notify({
 
 local CommunitySection = MainTab:CreateSection("Our Discord Community Server")
 
-local Button4 = MainTab:CreateButton({
+local Button5 = MainTab:CreateButton({
     Name = "Discord Link Click to Get Here!",
     Callback = function()
         setclipboard("https://discord.gg/aTNg2Dcw")
