@@ -60,7 +60,7 @@ local Button3 = MainTab:CreateButton({
     end,
 })
 
-local MainSection = Tab:CreateSection("Dead Rails (Alpha)")
+local DeadRailSection = Tab:CreateSection("Dead Rails (Alpha)")
 
 local Button4 = MainTab:CreateButton({
     Name = "Zypher Hub : Dead Rails : (Alpha) :",
