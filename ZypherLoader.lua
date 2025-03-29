@@ -65,7 +65,7 @@ local DeadRailSection = MainTab:CreateSection("Dead Rails (Alpha)")
 local Button4 = MainTab:CreateButton({
     Name = "Zypher Hub : Dead Rails : (Alpha) :",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/ZypherRails/refs/heads/main/ZypherDeadRails.lua",true))()
+        pring("soon")
     end,
 })
 
