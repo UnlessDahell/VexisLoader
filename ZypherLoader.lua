@@ -28,7 +28,7 @@ local Window = Rayfield:CreateWindow({
         Subtitle = "Zypher Hub Need Member! (.gg/aTNg2Dcw)",
         Note = "Join Our Discord for News And Key!! .gg/aTNg2Dcw",
         FileName = "ZTeam",
-        SaveKey = true,
+        SaveKey = false,
         GrabKeyFromSite = false,
         Key = {"Zypher-230-member"},
     }
