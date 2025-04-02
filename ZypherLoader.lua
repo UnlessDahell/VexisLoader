@@ -1,96 +1,155 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Rayfield, rayfieldError = loadstring(game:HttpGet('https://sirius.menu/rayfield', true))()
+
+if not Rayfield then
+    warn("Failed to load Rayfield:", rayfieldError)
+    return
+end
 
 local Window = Rayfield:CreateWindow({
-    Name = "Zypher Script Loader (.gg/aTNg2Dcw)",
-    Icon = 82284779245358,
-    LoadingTitle = "Wait until UI load up",
-    LoadingSubtitle = "by Sir.Zypher and Eyes Sight",
-    Theme = "Serenity",
-
-    DisableRayfieldPrompts = false,
-    DisableBuildWarnings = false,
-
+    Name = "Zypher Script Loader",
+    LoadingTitle = "Initializing Zypher Hub...",
+    LoadingSubtitle = "Loading modules and scripts",
     ConfigurationSaving = {
         Enabled = false,
         FolderName = "Zypher",
-        FileName = "Zypher"
+        FileName = "ZypherConfig"
     },
-
     Discord = {
-        Enabled = false,
-        Invite = "https://discord.gg/aTNg2Dcw",
+        Enabled = true,
+        Invite = "aTNg2Dcw",
         RememberJoins = true
     },
-
     KeySystem = false,
     KeySettings = {
-        Title = "Zypher Hub Key system (Preview)",
-        Subtitle = "Zypher Hub Need Member! (.gg/aTNg2Dcw)",
-        Note = "Join Our Discord for News And Key!! .gg/aTNg2Dcw",
-        FileName = "ZTeam",
+        Title = "Zypher Access System",
+        Subtitle = "Enter your key below",
+        Note = "Join discord.gg/aTNg2Dcw for keys",
+        FileName = "ZypherKey",
         SaveKey = false,
         GrabKeyFromSite = false,
-        Key = {"Zypher-230-member"},
+        Key = {"Zypher-230-member"}
     }
 })
 
-local MainTab = Window:CreateTab("Zypher Loader", 132272873219669)
-local MainSection = MainTab:CreateSection("Main Loader")
+local function SafeLoadScript(url)
+    local success, response = pcall(function()
+        return game:HttpGet(url, true)
+    end)
+    
+    if not success then
+        return false, "HTTP Error: "..tostring(response)
+    end
+    
+    local success, err = pcall(loadstring, response)
+    if not success then
+        return false, "Load Error: "..tostring(err)
+    end
+    
+    return true
+end
 
-local Button1 = MainTab:CreateButton({
-    Name = "Fearise Hub : Blue lock Rivals :",
+local MainTab = Window:CreateTab("Script Loader", 132272873219669)
+
+local MainSection = MainTab:CreateSection("Main Scripts")
+
+MainTab:CreateButton({
+    Name = "Fearise Hub: Blue Lock Rivals",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_Hub_Bluelock_newloader.lua", true))()
-    end,
+        Rayfield:Notify({
+            Title = "Loading",
+            Content = "Starting Fearise Hub...",
+            Duration = 3
+        })
+        
+        local success, err = SafeLoadScript("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/main/Fearise_Hub_Bluelock_newloader.lua")
+        if not success then
+            Rayfield:Notify({
+                Title = "Load Failed",
+                Content = err,
+                Duration = 6,
+                Image = 4483362458
+            })
+        end
+    end
 })
 
-local Button2 = MainTab:CreateButton({
-    Name = "Zypher Hub : Forsaken (Preview Ended) :",
+MainTab:CreateButton({
+    Name = "Zypher Hub: Forsaken (Preview Ended)",
     Callback = function()
-        print("Preview ended now it's time to continue full version of Zypher Forsaken")
-    end,
+        Rayfield:Notify({
+            Title = "Preview Ended",
+            Content = "Full version coming soon!\nJoin discord.gg/aTNg2Dcw for updates",
+            Duration = 6,
+            Image = 4483362458
+        })
+    end
 })
 
-local FearisePreUPDSection = MainTab:CreateSection("This is PreUPDATE version before Update main one (Test Version)")
+MainTab:CreateSection("Test Versions")
 
-local Button3 = MainTab:CreateButton({
-    Name = "Fearise Hub PreUPD v3.2 (Test Version) :",
+MainTab:CreateButton({
+    Name = "Fearise PreUPD v3.2 (Beta)",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/PreUPD-FeariseHubV3.2.lua",true))()
-    end,
+        Rayfield:Notify({
+            Title = "Loading Beta",
+            Content = "Starting test version...",
+            Duration = 3
+        })
+        
+        local success, err = SafeLoadScript("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/main/PreUPD-FeariseHubV3.2.lua")
+        if not success then
+            Rayfield:Notify({
+                Title = "Load Failed",
+                Content = err,
+                Duration = 6,
+                Image = 4483362458
+            })
+        end
+    end
 })
 
-local DeadRailSection = MainTab:CreateSection("Dead Rails (Alpha)")
+MainTab:CreateSection("Upcoming Scripts")
 
-local Button4 = MainTab:CreateButton({
-    Name = "Zypher Hub : Dead Rails : (Alpha) :",
+MainTab:CreateButton({
+    Name = "Dead Rails (Coming Soon)",
     Callback = function()
-        pring("soon")
-    end,
+        Rayfield:Notify({
+            Title = "In Development",
+            Content = "Dead Rails is currently being developed!\nCheck discord.gg/aTNg2Dcw for updates",
+            Duration = 6,
+            Image = 4483362458
+        })
+    end
+})
+
+MainTab:CreateSection("Community")
+
+MainTab:CreateButton({
+    Name = "Copy Discord Invite",
+    Callback = function()
+        setclipboard("https://discord.gg/aTNg2Dcw")
+        Rayfield:Notify({
+            Title = "Copied!",
+            Content = "Discord invite copied to clipboard",
+            Duration = 3,
+            Image = 4483362458
+        })
+    end
+})
+
+local DestroyTab = Window:CreateTab("Settings", 130985545137273)
+DestroyTab:CreateSection("UI Controls")
+
+DestroyTab:CreateButton({
+    Name = "Destroy UI",
+    Callback = function()
+        Rayfield:Destroy()
+    end
 })
 
 Rayfield:Notify({
-    Title = "Zypher Notifying",
-    Content = "Please don't forget to join our community server!! (https://discord.gg/p5ynKu5f)",
-    Duration = 25,
-    Image = 4483362458,
-})
-
-local CommunitySection = MainTab:CreateSection("Our Discord Community Server")
-
-local Button5 = MainTab:CreateButton({
-    Name = "Discord Link Click to Get Here!",
-    Callback = function()
-        setclipboard("https://discord.gg/aTNg2Dcw")
-    end,
-})
-
-local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 130985545137273)
-local DestroySection = DestroyTab:CreateSection("Destroy This Loader")
-
-local DestroyButton = DestroyTab:CreateButton({
-    Name = "Destroy Loader",
-    Callback = function()
-        Rayfield:Destroy()
-    end,
+    Title = "Zypher Script Loader",
+    Content = "Successfully loaded!\nJoin our Discord: discord.gg/aTNg2Dcw",
+    Duration = 8,
+    Image = 4483362458
 })
