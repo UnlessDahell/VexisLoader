@@ -11,8 +11,8 @@ local Window = Rayfield:CreateWindow({
     LoadingSubtitle = "Loading modules and scripts",
     ConfigurationSaving = {
         Enabled = false,
-        FolderName = "Zypher",
-        FileName = "ZypherConfig"
+        FolderName = "ZypherHubFile",
+        FileName = "ZypherLoader"
     },
     Discord = {
         Enabled = true,
@@ -25,9 +25,9 @@ local Window = Rayfield:CreateWindow({
         Subtitle = "Enter your key below",
         Note = "Join discord.gg/aTNg2Dcw for keys",
         FileName = "ZypherKey",
-        SaveKey = false,
+        SaveKey = true,
         GrabKeyFromSite = false,
-        Key = {"Zypher-230-member"}
+        Key = {"Zypher-DeadRails-Beta"}
     }
 })
 
@@ -111,8 +111,9 @@ MainTab:CreateButton({
 MainTab:CreateSection("Upcoming Scripts")
 
 MainTab:CreateButton({
-    Name = "Dead Rails (Coming Soon)",
+    Name = "Dead Rails (Ver.Bug-Beta-1)",
     Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/ZypherRails/refs/heads/main/ZypherDeadRails.lua",true))()
         Rayfield:Notify({
             Title = "In Development",
             Content = "Dead Rails is currently being developed!\nCheck discord.gg/aTNg2Dcw for updates",
