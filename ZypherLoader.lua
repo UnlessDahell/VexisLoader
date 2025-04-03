@@ -16,14 +16,14 @@ local Window = Rayfield:CreateWindow({
     },
     Discord = {
         Enabled = true,
-        Invite = "aTNg2Dcw",
+        Invite = "ere8H6q9",
         RememberJoins = true
     },
     KeySystem = false,
     KeySettings = {
         Title = "Zypher Access System",
         Subtitle = "Enter your key below",
-        Note = "Join discord.gg/aTNg2Dcw for keys",
+        Note = "Join https://discord.gg/ere8H6q9 for keys",
         FileName = "ZypherKey",
         SaveKey = true,
         GrabKeyFromSite = false,
@@ -85,7 +85,7 @@ MainTab:CreateButton({
     end
 })
 
-MainTab:CreateSection("Test Versions")
+MainTab:CreateLabel("Test Versions")
 
 MainTab:CreateButton({
     Name = "Fearise PreUPD v3.2 (Beta)",
@@ -108,7 +108,7 @@ MainTab:CreateButton({
     end
 })
 
-MainTab:CreateSection("Upcoming Scripts")
+MainTab:CreateLabel("Upcoming Scripts")
 
 MainTab:CreateButton({
     Name = "Dead Rails (Ver.Bug-Beta-1)",
@@ -123,12 +123,12 @@ MainTab:CreateButton({
     end
 })
 
-MainTab:CreateSection("Community")
+MainTab: CreateLabel("Community")
 
 MainTab:CreateButton({
     Name = "Copy Discord Invite",
     Callback = function()
-        setclipboard("https://discord.gg/aTNg2Dcw")
+        setclipboard("https://discord.gg/ere8H6q9")
         Rayfield:Notify({
             Title = "Copied!",
             Content = "Discord invite copied to clipboard",
