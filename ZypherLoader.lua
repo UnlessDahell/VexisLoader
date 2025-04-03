@@ -61,7 +61,7 @@ MainTab:CreateButton({
             Duration = 3
         })
         
-        local success, err = SafeLoadScript("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/main/Fearise_Hub_Bluelock_newloader.lua")
+        local success, err = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/main/Fearise_Hub_Bluelock_newloader.lua",true))()
         if not success then
             Rayfield:Notify({
                 Title = "Load Failed",
@@ -96,7 +96,7 @@ MainTab:CreateButton({
             Duration = 3
         })
         
-        local success, err = SafeLoadScript("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/main/PreUPD-FeariseHubV3.2.lua")
+        local success, err = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/main/PreUPD-FeariseHubV3.2.lua"))()
         if not success then
             Rayfield:Notify({
                 Title = "Load Failed",
@@ -113,13 +113,24 @@ MainTab:CreateLabel("Upcoming Scripts")
 MainTab:CreateButton({
     Name = "Dead Rails (Ver.Bug-Beta-1)",
     Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/ZypherRails/refs/heads/main/ZypherDeadRails.lua",true))()
         Rayfield:Notify({
             Title = "In Development",
             Content = "Dead Rails is currently being developed!\nCheck discord.gg/aTNg2Dcw for updates",
             Duration = 6,
             Image = 4483362458
         })
+    end
+})
+
+local success, err = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/main/PreUPD-FeariseHubV3.2.lua"))()
+        if not success then
+            Rayfield:Notify({
+                Title = "Load Failed",
+                Content = err,
+                Duration = 6,
+                Image = 4483362458
+            })
+        end
     end
 })
 
