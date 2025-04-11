@@ -24,53 +24,37 @@ local Window = Rayfield:CreateWindow({
 
     KeySystem = false,
     KeySettings = {
-        Title = "Zypher Hub Key system (Preview)",
-        Subtitle = "Zypher Hub Need Member! (.gg/ere8H6q9)",
+        Title = "Vexis Hub Key system (Preview)",
+        Subtitle = "Vexis Hub Need Member! (.gg/ere8H6q9)",
         Note = "Join Our Discord for News And Key!! .gg/ere8H6q9",
-        FileName = "ZypherHubFile",
+        FileName = "VexisHubFile",
         SaveKey = true,
         GrabKeyFromSite = false,
-        Key = {"ZypherHub-DeadRails-Beta"},
+        Key = {"Vexis-DeadRails-Beta"},
     }
 })
 
-local MainTab = Window:CreateTab("Zypher Loader", 132272873219669)
+local MainTab = Window:CreateTab("Vexis Loader", 132272873219669)
 local MainSection = MainTab:CreateSection("Main Loader")
 
-local Button1 = MainTab:CreateButton({
-    Name = "Fearise Hub : Blue lock Rivals :",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_Hub_Bluelock_newloader.lua", true))()
-    end,
-})
-
 local Button2 = MainTab:CreateButton({
-    Name = "Zypher Hub : Forsaken (Preview Ended) :",
+    Name = "Vexis Hub : Forsaken (Preview Ended) :",
     Callback = function()
         print("Preview ended now it's time to continue full version of Zypher Forsaken")
-    end,
-})
-
-MainTab:CreateLabel("This is PreUPDATE version before Update main one (Test Version)")
-
-local Button3 = MainTab:CreateButton({
-    Name = "Fearise Hub PreUPD v3.2 (Test Version) :",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/PreUPD-FeariseHubV3.2.lua",true))()
     end,
 })
 
 MainTab:CreateLabel("Dead Rails (Test)")
 
 local Button4 = MainTab:CreateButton({
-    Name = "Zypher Hub : Dead Rails : (Bug-Beta-1) :",
+    Name = "Vexis Hub : Dead Rails : (Bug-Beta-1) :",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/ZypherRails/refs/heads/main/ZypherDeadRails.lua",true))()
     end,
 })
 
 Rayfield:Notify({
-    Title = "Zypher Notifying",
+    Title = "Vexis Notifying",
     Content = "Please don't forget to join our community server!! (https://discord.gg/p5ynKu5f)",
     Duration = 25,
     Image = 4483362458,
