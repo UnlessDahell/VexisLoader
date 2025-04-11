@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "Velix Script Loader (.gg/ere8H6q9)",
+    Name = "Vexis Script Loader (.gg/ere8H6q9)",
     Icon = 82284779245358,
     LoadingTitle = "Wait until UI load up",
     LoadingSubtitle = "by .Zypher and !RENDER",
