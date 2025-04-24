@@ -73,7 +73,7 @@ local Paragraph = MainTab:CreateParagraph({Title = "Change Log", Content = "Vexi
 
 ```
 -- Main --
-[+] Discord Link Button (Don't Change Link Yet)
+[+] Discord Link Button 
 
 -- Aimbot (New Handler and Optimize Next Update) --
 [+] Add WallCheck Toggle
