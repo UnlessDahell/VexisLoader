@@ -130,15 +130,6 @@ Rayfield:Notify({
     Image = 4483362458,
 })
 
-local CommunitySection = MainTab:CreateSection("Our Discord Community Server")
-
-local Button5 = noTab:CreateButton({
-    Name = "Discord Link Click to Get Here!",
-    Callback = function()
-        setclipboard("https://discord.gg/ere8H6q9")
-    end,
-})
-
 local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 130985545137273)
 local DestroySection = DestroyTab:CreateSection("Destroy This Loader")
 
