@@ -14,14 +14,14 @@ local function getGameName()
     return (success and info and info.Name) or "Unknown"
 end
 
-local thumbUrl = "rbxthumb://type=AvatarHeadShot&id=" .. userId .. "&w=150&h=150"
-
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "Vexis Hub | Script Hub",
-    LoadingTitle = "Vexis Hub Loading...",
-    LoadingSubtitle = "Welcome back, " .. player.Name,
+    Name = "Vexis H | Loader",
+    LoadingTitle = "Vexis H | Loading...",
+    LoadingSubtitle = "Welcome! Thank for using for script!, " .. player.Name,
+    Theme = "Light",
+    
     ConfigurationSaving = {
         Enabled = true,
         FolderName = "VexisHub",
@@ -29,35 +29,13 @@ local Window = Rayfield:CreateWindow({
     },
     Discord = {
         Enabled = true,
-        Invite = "yourdiscordcode",
+        Invite = ".gg/YVyfVYGR23",
         RememberJoins = true
     },
     KeySystem = false,
 })
 
-local MainTab = Window:CreateTab("Main", 4483362458)
-
-local function copyToClipboard(text)
-    setclipboard(text)
-    print("Just copied this to your clipboard: " .. text)
-end
-
-MainTab:CreateButton({
-    Name = "Show Player Info & Copy Discord",
-    Callback = function()
-        MainTab:CreateParagraph({
-            Title = "Your Info",
-            Content = string.format(
-                "Username: %s\nUserId: %s\nAccount Age: %s\nGame: %s",
-                player.Name,
-                userId,
-                getAccountAge(),
-                getGameName()
-            )
-        })
-        copyToClipboard("https://discord.gg/YVyfVYGR23")
-    end,
-})
+local MainTab = Window:CreateTab("Welcome To Vexis H", 4483362458)
 
 MainTab:CreateParagraph({
     Title = "Welcome To Vexis H",
@@ -65,69 +43,56 @@ MainTab:CreateParagraph({
 })
 
 MainTab:CreateParagraph({
-    Title = "Quick Info",
-    Content = string.format("Username: %s\nUserId: %s", player.Name, userId)
+    Title = "Your Quick Info",
+    Content = string.format(
+        "Username: %s\nUserId: %s\nAccount Age: %s\nGame: %s",
+        player.Name,
+        userId,
+        getAccountAge(),
+        getGameName()
+    )
 })
 
-local Paragraph = MainTab:CreateParagraph({Title = "Change Log", Content = "Vexis H : Dead Rails Dev Log 🪵 ( Beta-1.1 )
-
-```
--- Main --
-[+] Discord Link Button 
-
--- Aimbot (New Handler and Optimize Next Update) --
-[+] Add WallCheck Toggle
-[%] Rewrite Ignore Horse Toggle
-
--- Visual (Performance Issue) -- 
-[#] Remove For Now While Rewriting
-
--- NoClip --
-[%] Improvement NoClip
-[%] Rewrite Keybind (Some How Not Show Up)
-```
-# **** What are these mean? ****
-
-
-```
-
-[ + ] Added/New
-[ % ] Fixing/Update/Rewrite
-[ # ] In dev/Testing/Plan to added
-[ ? ] Unconfirmed 
-[ ~ ] Rmoved (Temporary)
-[ - ] Removed (Permanent)
-
-
-```
-
-This Major Update By !RENDER
-And w/VoxLar"})
-
-local GameTab = Window:CreateTab("Vexis Loader", 132272873219669)
-local GameSection = MainTab:CreateSection("Main Loader")
-
-local Button2 = GameTab:CreateButton({
-    Name = "Vexis Hub : Forsaken (3 days launch) :",
+MainTab:CreateButton({
+    Name = "Copy Discord Invite",
     Callback = function()
-        print("3 days see you")
+        setclipboard("https://discord.gg/YVyfVYGR23")
     end,
 })
 
-GameTab:CreateLabel("Dead Rails (Test)")
+local LoadTab = Window:CreateTab("Vexis H Loader", 132272873219669)
+local LoadSection = LoadTab:CreateSection("Main Loader")
 
-local Button4 = MainTab:CreateButton({
-    Name = "Vexis Hub : Dead Rails : (Beta-1.1) :",
+local Button2 = LoadTab:CreateButton({
+    Name = "Vexis H : Forsaken (Preview Ended) :",
+    Callback = function()
+        print("Preview ended now it's time to continue full version of Vexis H Forsaken")
+    end,
+})
+
+local LoadSection2 = LoadTab:CreateSection("Dead Rails (Alpha)")
+
+local Button4 = LoadTab:CreateButton({
+    Name = "Vexis H : Dead Rails : (Beta-1.1) :",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/ZypherRails/refs/heads/main/ZypherDeadRails.lua",true))()
     end,
 })
 
 Rayfield:Notify({
-    Title = "Vexis Notifying",
-    Content = "Please don't forget to join our community server!! (https://discord.gg/YVyfVYGR23)",
+    Title = "Vexis H Notifying",
+    Content = "Please don't forget to join our community server!! (https://discord.gg/p5ynKu5f)",
     Duration = 25,
     Image = 4483362458,
+})
+
+local CommunitySection = LoadTab:CreateSection("Our Discord Community Server")
+
+local Button5 = LoadTab:CreateButton({
+    Name = "Discord Link Click to Get Here!",
+    Callback = function()
+        setclipboard("https://discord.gg/aTNg2Dcw")
+    end,
 })
 
 local DestroyTab = Window:CreateTab("Destroy This Loader Ui", 130985545137273)
